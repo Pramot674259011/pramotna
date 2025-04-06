@@ -1,17 +1,27 @@
-import java.util.Scanner;
-
 public class HelloWorld {
+    public static int fibonacciRec(int n) {
+        if (n <= 1) return n;
+        return fibonacciRec(n - 1) + fibonacciRec(n - 2);
+    }
+
+    public static void fibonacciLoop(int n) {
+        int a = 0, b = 1, c;
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+
     public static void main(String[] args) {
-                int factNum, factorial;l
-Scanner scanner = new Scanner(System.in);
-                System.out.print("Enter a number: ");
-                int factNum = scanner.nextInt();
-                int factorial = 1;
-                for (int i = 1; i <= factNum; i++) {
-                    factorial *= i;
-                }
-                System.out.println("Factorial: " + factorial);
-        
-                scanner.close();
+        int n = 10;
+        System.out.println("Fibonacci (Loop):");
+        fibonacciLoop(n);
+
+        System.out.println("\nFibonacci (Recursion):");
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacciRec(i) + " ");
+        }
+    }
 }
-}    
