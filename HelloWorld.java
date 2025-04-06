@@ -1,13 +1,12 @@
-
 import java.util.Scanner;
 
 public class HelloWorld {
     public static void main(String[] args) {
-                double celsius,fahrenheit;
+         double cm,inches;        
 Scanner scanner = new Scanner(System.in);
-                System.out.print("Enter temperature in Celsius: ");
-                celsius = scanner.nextDouble();
-                fahrenheit = (celsius * 9/5) + 32;
-                System.out.println("Temperature in Fahrenheit: " + fahrenheit);
+                System.out.print("Enter length in cm: ");
+        cm = scanner.nextDouble();
+        inches = cm / 2.54;
+        System.out.println("Length in inches: " + inches);
     }
 }
