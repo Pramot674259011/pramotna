@@ -1,10 +1,15 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class javalab {
+    static Random r = new Random();
     static Scanner s = new Scanner(System.in);
-    static int n = s.nextInt(), i;
+    static int t = r.nextInt(100) + 1, g;
 
     public static void main(String[] args) {
-        for (i = 1; i <= 12; i++) System.out.println(n + " x " + i + " = " + (n * i));
+        do {
+            g = s.nextInt();
+            System.out.println(g < t ? "ต่ำไป!" : g > t ? "สูงไป!" : "ถูกต้อง!");
+        } while (g != t);
     }
 }
