@@ -1,15 +1,13 @@
-import java.util.Random;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class javalab {
-    static Random r = new Random();
     static Scanner s = new Scanner(System.in);
-    static int t = r.nextInt(100) + 1, g;
+    static int n = s.nextInt(), i, numbers[] = new int[n];
 
     public static void main(String[] args) {
-        do {
-            g = s.nextInt();
-            System.out.println(g < t ? "ต่ำไป!" : g > t ? "สูงไป!" : "ถูกต้อง!");
-        } while (g != t);
+        for (i = 0; i < n; i++) numbers[i] = s.nextInt();
+        Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers));
     }
 }
