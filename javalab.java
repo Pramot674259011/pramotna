@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class javalab {
     static Scanner s = new Scanner(System.in);
-    static int price = s.nextInt(), paid = s.nextInt(), change = paid - price, bills[] = {1000, 500, 100, 50, 20, 10, 5, 1};
+    static int n = s.nextInt(), i;
 
     public static void main(String[] args) {
-        for (int b : bills) if (change >= b) { System.out.println(b + " บาท: " + change / b); change %= b; }
+        for (i = 1; i <= 12; i++) System.out.println(n + " x " + i + " = " + (n * i));
     }
 }
