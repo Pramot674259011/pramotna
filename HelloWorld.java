@@ -1,27 +1,24 @@
-public class HelloWorld {
-    public static int fibonacciRec(int n) {
-        if (n <= 1) return n;
-        return fibonacciRec(n - 1) + fibonacciRec(n - 2);
-    }
+import java.util.Scanner;
 
-    public static void fibonacciLoop(int n) {
-        int a = 0, b = 1, c;
-        for (int i = 0; i < n; i++) {
-            System.out.print(a + " ");
-            c = a + b;
-            a = b;
-            b = c;
-        }
-    }
-
+public class MinMaxFinder {
     public static void main(String[] args) {
-        int n = 10;
-        System.out.println("Fibonacci (Loop):");
-        fibonacciLoop(n);
+        Scanner scanner = new Scanner(System.in);
+        int[] numbers = new int[5];
 
-        System.out.println("\nFibonacci (Recursion):");
-        for (int i = 0; i < n; i++) {
-            System.out.print(fibonacciRec(i) + " ");
+        System.out.println("ป้อนตัวเลข 5 ตัว:");
+        for (int i = 0; i < 5; i++) {
+            numbers[i] = scanner.nextInt();
         }
+
+        int min = numbers[0], max = numbers[0];
+        for (int num : numbers) {
+            if (num < min) min = num;
+            if (num > max) max = num;
+        }
+
+        System.out.println("ค่าต่ำสุด: " + min);
+        System.out.println("ค่าสูงสุด: " + max);
     }
 }
+
+
