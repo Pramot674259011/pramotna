@@ -1,11 +1,8 @@
-
-import java.util.Scanner;
-
-public class javalab {
-    static Scanner s = new Scanner(System.in);
-    static int num = s.nextInt();
+class Person {
+    static String name = "BANK";
+    static int age = 25;
 
     public static void main(String[] args) {
-        System.out.println(Integer.toBinaryString(num));
+        System.out.println("ชื่อ: " + name + ", อายุ: " + age);
     }
 }
